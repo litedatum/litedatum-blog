@@ -78,6 +78,9 @@ class Theme {
       return;
     }
 
+    // Force light mode
+    this.#setLight();
+
     this.#darkMedia.addEventListener('change', () => {
       const lastMode = this.#mode;
       this.#clearMode();

@@ -10,6 +10,16 @@
 }
 
 html {
+  // Force light theme as default
+  &:not([data-mode]),
+  &[data-mode='light'] {
+    @include light.styles;
+  }
+
+  &[data-mode='dark'] {
+    @include dark.styles;
+  }
+
   @media (prefers-color-scheme: light) {
     &:not([data-mode]),
     &[data-mode='light'] {

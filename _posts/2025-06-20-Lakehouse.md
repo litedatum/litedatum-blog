@@ -50,8 +50,8 @@ Netflix keeps every single click, view, pause, and rewind in their lakehouse. Ch
 
 ## More Plain Talk Data Topics
 
-- [Data Warehouse vs Data Lake]({{ site.baseurl }}/posts/dw-vs-dl/)
-- [ETL vs ELT Explained]({{ site.baseurl }}/posts/etlvselt/)
-- [What is a Data Mart?]({{ site.baseurl }}/posts/data-mart/)
+- [Data Warehouse vs Data Lake](/posts/dw-vs-dl/)
+- [ETL vs ELT Explained](/posts/etlvselt/)
+- [What is a Data Mart?](/posts/data-mart/)
 
 **Keywords**: data lakehouse, lakehouse architecture, data lake vs data warehouse, modern data architecture, cloud analytics, data storage optimization, unified analytics platform, delta lake, data mesh architecture

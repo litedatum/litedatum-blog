@@ -2,7 +2,7 @@
 title: "Plain Talk Data: Data Pipeline"
 date: 2025-06-11 11:00:00 +0800
 categories: [Plain Talk Data, Data Engineering]
-tags: [data pipeline, data engineering, etl, data processing, automation, beginner, data management]
+tags: [data pipeline, data engineering, ETL, data processing, automation, beginner, data management]
 author: Charles Fan
 description: "A plain-English explanation of data pipelines - the assembly line for information. Learn how data flows from raw materials to useful insights automatically."
 image: /assets/img/posts/data-pipeline-cover.jpg

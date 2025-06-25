@@ -204,8 +204,8 @@ Make integrity validation a habit, not a crisis response. Your future self—and
 ## Related Topics
 
 Explore more data quality and engineering topics:
-- [Data Quality Fundamentals](/posts/data-quality/)
-- [ETL Best Practices](/posts/data-pipeline/)
-- [Data Monitoring Strategies](/posts/five-pillars-of-data-truth/)
+- [Data Quality Fundamentals](/posts/Data-Quality/)
+- [ETL Best Practices](/posts/Data-Pipeline/)
+- [Data Monitoring Strategies](/posts/Five-pillars-of-Data-Truth/)
 
 **Keywords**: data integrity validation, missing data detection, calculation error debugging, data discrepancy investigation, ETL validation, data quality monitoring, data pipeline reliability, systematic data validation, data reconciliation techniques

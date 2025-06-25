@@ -1,9 +1,9 @@
 name: Lint Commit Messages
 
 on:
+  # Only run on pull requests and hotfix branches to avoid conflicts
   push:
     branches:
-      - master
       - "hotfix/*"
   pull_request:
 

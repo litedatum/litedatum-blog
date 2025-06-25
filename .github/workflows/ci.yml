@@ -1,9 +1,10 @@
 name: CI
 
 on:
+  # Only run CI on pull requests and hotfix branches
+  # Remove master branch to avoid conflicts with Cloudflare Pages deployment
   push:
     branches:
-      - master
       - "hotfix/*"
     paths-ignore:
       - ".github/**"

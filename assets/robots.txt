@@ -6,5 +6,8 @@ permalink: /robots.txt
 User-agent: *
 
 Disallow: /norobots/
+Disallow: /cdn-cgi/
+# Disallow problematic pagination paths
+Disallow: /page*/
 
 Sitemap: {{ '/sitemap.xml' | absolute_url }}

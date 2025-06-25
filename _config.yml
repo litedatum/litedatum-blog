@@ -143,6 +143,9 @@ pwa:
 
 paginate: 10
 
+# Define the pagination path to avoid /page2/ issues
+paginate_path: "/posts/page:num/"
+
 # The base URL of your site
 baseurl: ""
 

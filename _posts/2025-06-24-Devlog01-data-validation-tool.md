@@ -14,7 +14,6 @@ seo:
   keywords: "data validation tool, lightweight data quality, CLI data validation, 30 second data validation setup, zero config data quality tool, cross-cloud data validation CLI, data quality automation, SQL rule engine, pluggable data validation"
 ---
 
-# DevLog #1: Building a 30-Second Data Validation Tool That Doesn't Suck
 
 > *Cross-cloud ready, code-first, up and running in 30 seconds*
 

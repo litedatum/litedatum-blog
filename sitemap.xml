@@ -1,0 +1,42 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% comment %} 遍历所有普通页面 {% endcomment %}
+  {% for page in site.html_pages %}
+    {% comment %} 排除所有 tags 和 categories 相关的页面，同时排除 sitemap.xml 自己 {% endcomment %}
+    {% unless page.url contains '/tags/' or page.url contains '/categories/' or page.url contains '/page' or page.sitemap == false %}
+      <url>
+        <loc>{{ page.url | absolute_url | xml_escape }}</loc>
+        {% if page.last_modified_at %}
+          <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+        {% elsif page.date %}
+          <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+          <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        {% endif %}
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+      </url>
+    {% endunless %}
+  {% endfor %}
+
+  {% comment %} 遍历所有文章 {% endcomment %}
+  {% for post in site.posts %}
+    {% comment %} 一般文章我们都希望收录，除非它自己设置了 sitemap: false {% endcomment %}
+    {% unless post.sitemap == false %}
+      <url>
+        <loc>{{ post.url | absolute_url | xml_escape }}</loc>
+        {% if post.last_modified_at %}
+          <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+        {% else %}
+          <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        {% endif %}
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+      </url>
+    {% endunless %}
+  {% endfor %}
+</urlset>

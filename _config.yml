@@ -25,18 +25,7 @@ description: >- # used by seo meta and the atom feed
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://blog.litedatum.com" # 部署到Cloudflare后填入你的域名
 
-plugins:
-  - jekyll-sitemap
 
-sitemap_exclude:
-  - "/tags/"
-  - "/tags/*"
-  - "/categories/"
-  - "/categories/*"
-  - "/archives/"
-  - "/archives/*"
-  - "/posts/page*"
-  
 github:
   username: litedatum # 修改为你的GitHub用户名
 

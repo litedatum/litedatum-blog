@@ -16,10 +16,10 @@ timezone: America/New_York
 
 title: Lite Datum # Change to your blog title
 
-tagline: Sharing insights and thoughts on data management # Change to your subtitle
+tagline: data reconciliation and lightweight data validation # Change to your subtitle
 
 description: >- # used by seo meta and the atom feed
-  A blog focused on data management sharing and personal insights, documenting the journey of learning and discovery.
+  Focused on practical data quality. Explore articles on data reconciliation and find a simple, powerful data validation tool to ensure your data is accurate and reliable.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.

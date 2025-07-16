@@ -1,10 +1,10 @@
 ---
-title: "DevLog #2 - Rethinking My Data Validation Tool: From Scope Creep to a True MVP"
+title: "DevLog#2: Why I Scrapped My Half-Built Data Validation Platform"
 date: 2025-07-15 09:00:00 +0800
 categories: [Development, Data Engineering, Dev Log]
 tags: [data validation, python app development, ai pair programming, scope creep, technical debt, mvp design, pydantic]
 author: Charles Fan
-description: "Lessons learned from building a lightweight Python data validation tool. How scope creep and technical debt reshaped the MVP, and why a CLI-first, testable core won out."
+description: "A data architect's honest account of scrapping a half-built data validation platform to build what users actually want: a lightweight Python CLI tool."
 image:
   path: /assets/img/posts/Cutting-Scope-Creep-for-a-True-MVP.jpg
   alt: "DevLog #2 – Cutting Scope Creep for a True MVP"
@@ -16,131 +16,90 @@ seo:
 
 ## From Ambition to Simplicity: The Origin of This Data Validation Tool
 
-Have you ever seen a data engineer spend four hours manually checking data quality? Or watched a business analyst lose faith in their dashboard because of a single broken pipeline? I have—and it’s painful to watch.
+Sometimes the hardest part of building a product isn't the coding—it's knowing when to stop and ask: "Am I building the right thing?"
 
-That’s why I started building **this data validation tool**—lightweight, Python-first, and aimed at people like us. But here’s the thing: the journey didn’t go as planned.
+Two months ago, I was deep in the trenches of **ValidateLite**, my data validation tool, convinced I was 70% done. I had a sleek WebUI, metadata management, and a FastAPI backend. Everything looked promising on paper. Then I stumbled across a Reddit post that changed everything.
 
-This post is about the messy middle—why my original design spiraled out of control, how I course-corrected, and what I learned about **building an MVP**, **scope creep**, and **technical debt management** along the way.
+### The Wake-Up Call
 
----
+A frustrated developer was complaining about Great Expectations: "Too complex, too many dependencies. I don't want a 'data quality platform'—I want a 'data validation function'."
 
-##  Why Build a Data Validation Tool?
+That hit me like a cold shower. Here I was, building exactly what this person *didn't* want.
 
-As a seasoned data architect, I’ve led teams developing Java-based data quality management systems. So, I’m no stranger to the complexities of data validation.
+### Why Build a Data Validation Tool?
 
-But this time was different. Instead of leading a team, I wanted to see if I could **build an entire app myself**—in Python. I had never developed a Python application from scratch, but the rise of **AI pair programming** made me wonder:
+As a seasoned data architect who'd led Java-based data quality tools before, I thought I understood the problem. **Python data validation** seemed straightforward enough. With AI pair programming on the rise, why not leverage my domain knowledge and let AI handle the coding gaps?
 
-> *“If I understand the domain, design, and engineering principles, could AI help me bridge the coding gap?”*
+My initial vision was ambitious: a WebUI-based tool with metadata configuration, connection management, rule execution, and result visualization. I chose Streamlit for the frontend and FastAPI for the backend, aiming for something lightweight yet comprehensive.
 
-Spoiler: yes, but only after a few painful missteps.
+But "lightweight" quickly became anything but.
 
----
+### Why It Went Wrong
 
-##  How Scope Creep Killed My First Prototype
+After two months of development, I realized I'd made four critical mistakes:
 
-The original plan for this data validation tool was ambitious. It was a **web-based data quality solution** featuring:
+1. **Unclear requirements** - I had a PRD but no detailed functional specs. AI filled the gaps by expanding features I never asked for.
 
-* **Metadata configuration UI**
-* **Connection management**
-* **Rule authoring and execution**
-* **Results visualization**
+2. **Vague design** - Especially around API interfaces, leading to two painful refactors mid-development.
 
-For “lightweight” purposes, I chose **Streamlit** for the frontend and combined it with a FastAPI backend, a rules engine, and metadata persistence.
+3. **Overestimating AI capabilities** - I lacked experience in driving AI for app development, despite my software engineering background.
 
-Here’s where I went wrong:
+4. **Perfectionism killing the MVP** - I added complex features like multi-rule execution for single tables and obsessed over test coverage.
 
-- ✅ I understood **architecture**
-- ❌ But I underestimated **development effort**
-- ❌ And overestimated **AI’s ability to make design decisions**
+The **scope creep** was real. I'd drifted far from my **Minimum Viable Product** goals.
 
+### The Four Questions That Changed Everything
 
-Two months later, I had:
+That Reddit post forced me to ask myself some uncomfortable questions:
 
-* Basic development done
-* 60% unit test coverage
-* An MVP… that wasn’t minimal at all.
+- Does my product really need to maintain a metadata layer?
+- Is my core engine small and beautiful enough to support different deployment scenarios?
+- Is WebUI actually necessary for my target users?
+- What's the most valuable part of my product, and is it truly at the center?
 
-###  My Four Big Mistakes
+Once I asked the right questions, the answers became painfully obvious. My **target audience**—data engineers and analysts—didn't want another platform. They wanted a tool that could validate data with a single command, SQL query, or script.
 
-1. **Vague requirements.**
-   I had a PRD but no detailed functional specs. AI filled the gaps, but in unpredictable ways.
+## The Great Pivot
 
-2. **Weak design.**
-   Especially at the API level. This forced me to refactor—twice.
+I made a tough decision: scrap the half-built WebUI version and extract the rule engine as a standalone CLI tool.
 
-3. **Blind faith in AI.**
-   Pair programming is powerful, but it’s not magic. You still need to *drive* the process.
+But there was a problem. The rule engine was tightly coupled with other modules, especially through ORM models designed for metadata persistence. This violated basic **DDD principles** I knew by heart but had somehow ignored in practice.
 
-4. **Perfectionism.**
-   I over-engineered features (like multi-rule execution) and obsessed over test coverage—losing sight of my MVP goal.
+> "Technical debt must be paid. I couldn't justify keeping legacy code just to maintain backward compatibility."
 
----
+I redesigned the interface using a clean schema model in a shared module, refactored twice to internalize configuration management and error handling, and finally achieved a truly independent core module.
 
-##  The Reddit Post That Changed Everything
+## Building an App with Python: Lessons Learned
 
-One night, I stumbled across a Reddit thread:
+Working on this **Python app development** project taught me that domain expertise doesn't automatically translate to implementation wisdom. When I lacked confidence in Python project structure, I defaulted to AI suggestions—not always the best approach.
 
-> *“I don’t want a data quality platform. I just want a data validation function.”*
+The refactoring process was painful but necessary. I couldn't **manage technical debt** by pushing it to future versions. Clean architecture isn't just academic theory; it's survival for any product that plans to evolve.
 
-That hit me hard. Was I building the wrong thing?
+Now I have a completed CLI module with comprehensive tests, and I'm close to releasing the first version. The journey from bloated platform to focused tool has been humbling but educational.
 
-I asked myself:
+## What's Next for the data validation tool
 
-1. Do I really need a full metadata management layer?
-2. Is my core small and elegant enough for flexible deployment?
-3. Does my target user want a WebUI? Or a **CLI tool**?
-4. What’s the *most valuable* part of this product?
+The new **ValidateLite** embodies everything I originally wanted: **lightweight Python data validation** that gets you started in 30 seconds. No complex setups, no YAML configuration files, just straightforward data quality checks.
 
-The answer was clear. I was chasing the wrong vision.
+**Key features in the pipeline:**
+- **Pydantic**-powered schema validation
+- CLI-first design for developer workflows  
+- Minimal dependencies and fast startup
+- Extensible rule engine architecture
 
----
+## The Real Lessons
 
-##  The Hard Reset: Stripping to the Core
+Two key takeaways from this experience:
 
-I scrapped the half-finished web app. Painful, yes—but necessary.
+**Product direction trumps technical execution.** You can build the most elegant code, but if you're solving the wrong problem, it's worthless. I thought I was building for data engineers, but I was actually building for platform administrators.
 
-I focused all energy on:
+**Complete requirements and design are non-negotiable.** **AI pair programming** is powerful, but it amplifies both good and bad decisions. Without clear specifications, AI will gladly help you build the wrong thing very efficiently.
 
-- ✅ A **rules engine** that was small, fast, and testable
-- ✅ A **CLI** interface for quick validation workflows
-- ✅ Removing tight coupling with metadata models
-
-This wasn’t easy. The rules engine was deeply entangled with ORM models from the previous design. Untangling them took two major refactors.
-
-I redesigned the `shared` module, created new schema models for the rules engine, and tightly integrated configuration and error handling. Now, the core is **independent and portable**.
-
-The result?
-- lightweight CLI-based data validation tool
-- Almost 100% test coverage
-- A product much closer to my original vision
-
-
----
-
-##  Lessons Learned from the Project
-
-This journey taught me two key lessons:
-
-1. **Product direction matters more than technical details.**
-   If you get this wrong, no amount of perfect code can save you.
-
-2. **Define requirements and designs upfront.**
-   AI pair programming is powerful, but it needs clear boundaries to avoid **scope creep**.
-
-Now I can say with confidence:
-
-> *“I may not know if I’m 100% on the right path, but at least I’m walking in the right direction.”*
-
----
-
-##  What’s Next?
-
-The CLI module is almost ready for release. In my next DevLog, I’ll share how I designed the **data validation API** and why I kept it **Pydantic-first** to simplify Python data validation workflows.
+These lessons aren't just about **data validation tools**—they apply to any technical product development. Sometimes the best code you can write is the code you delete.
 
 ---
 
 ###  SVG Flowchart: ValidateLite’s Direction Reset
-
 
 <svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
   <style>

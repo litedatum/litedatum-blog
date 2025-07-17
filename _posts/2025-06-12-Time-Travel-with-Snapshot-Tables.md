@@ -5,7 +5,9 @@ categories: [Data Engineering, Data Recovery]
 tags: [snapshot tables, time travel, data recovery, data backup, data engineering, disaster recovery, data versioning, data safety]
 author: Charles Fan
 description: "Learn how snapshot tables provide instant time travel capabilities for data recovery. Master the art of protecting production data with simple yet powerful snapshot techniques."
-image: /assets/img/posts/time-travel-snapshot-cover.jpg
+image: 
+    path: /assets/img/posts/time-travel-snapshot-cover.jpg
+    alt: "Snapshot tables provide instant time travel capabilities for data recovery"
 seo:
   title: "Time Travel with Snapshot Tables: 10-Minute Data Recovery | Data Engineering"
   description: "Discover how snapshot tables enable instant data recovery and time travel in production environments. Learn practical techniques for data disaster prevention."

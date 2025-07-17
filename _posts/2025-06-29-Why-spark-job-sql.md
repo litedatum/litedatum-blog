@@ -5,7 +5,9 @@ categories: [Data Engineering, Data Quality]
 tags: [sql pushdown, database optimization, spark, cloud data architecture, data pipeline, query optimization, data processing]
 author: Charles Fan
 description: "Stop burning cloud budget on Spark for basic data validation. Learn why SQL pushdown is the smarter, faster way to ensure data quality and pipeline efficiency."
-image: /assets/img/posts/why-spark-job-sql-cover.jpg
+image: 
+  path: /assets/img/posts/why-spark-job-sql-cover.jpg
+  alt: "SQL Pushdown vs Spark: Smarter Data Validation"
 seo:
   title: "SQL Pushdown vs Spark: When Database Native Processing Wins | Data Engineering"
   description: "Explore SQL pushdown vs external execution in cloud data architectures. Learn when to leverage database intelligence and when to build custom processing engines."

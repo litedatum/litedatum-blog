@@ -15,6 +15,8 @@ seo:
 ---
 
 
+> Update (2025-08-06): ValidateLite is now open source and released. GitHub: [litedatum/validatelite](https://github.com/litedatum/validatelite). Install via PyPI: `pip install validatelite`, then run `vlite --help`.
+
 > *Cross-cloud ready, code-first, up and running in 30 seconds*
 
 Have you ever seen a data engineer spend four hours manually checking data quality? Or watched a business analyst lose faith in their dashboard due to unreliable data? I have, and it’s tough to witness.
@@ -36,7 +38,7 @@ Current data validation tools either demand a PhD in configuration or require yo
 
 ### The "30-Second" Philosophy
 
-This data validation tool is built on a simple principle: **"Cross-cloud ready, code-first, operational in 30 seconds."** And importantly, it will be open source.
+This data validation tool is built on a simple principle: **"Cross-cloud ready, code-first, operational in 30 seconds."** And it is open source: [ValidateLite on GitHub](https://github.com/litedatum/validatelite).
 
 Here's what that means in practice:
 
@@ -85,24 +87,24 @@ Common utilities like database connections, schema definitions, and shared class
 
 ### The CLI Interface
 
-Our MVP starts with a command-line interface, but the architecture supports future expansion to web UIs, cloud deployment tools, and even SaaS offerings.
+The initial release is CLI-first, but the architecture supports future expansion to web UIs, cloud deployment tools, and even SaaS offerings.
 
 ## How to validate data with ValidateLite
 
 ### Quick Start
 
 ```bash
-pip install -e .
-validate run examples/orders.csv examples/rules.json --report report.json
+pip install validatelite
+vlite check examples/orders.csv --rule "not_null(id)" --rule "unique(email)" --report report.json
 cat report.json
 ```
 
-### Docker Deployment
+### Docker (build from source)
 
 ```bash
-docker build -t validate-lite:0.1 .
-docker run -v $PWD/examples:/data validate-lite:0.1 \
-    validate run /data/orders.csv /data/rules.json
+docker build -t validatelite:latest .
+docker run --rm -v $PWD/examples:/data validatelite:latest \
+  vlite check /data/orders.csv --rules /data/rules.json
 ```
 
 ### The Core Function

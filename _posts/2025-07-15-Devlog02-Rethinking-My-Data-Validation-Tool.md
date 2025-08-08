@@ -14,6 +14,8 @@ seo:
   keywords: "data validation, python app development, ai pair programming, scope creep, technical debt, mvp design, pydantic"
 ---
 
+> Update (2025-08-06): ValidateLite is now open source and released. GitHub： [litedatum/validatelite](https://github.com/litedatum/validatelite). Install via PyPI: `pip install validatelite`, then run `vlite --help`.
+
 ## From Ambition to Simplicity: The Origin of This Data Validation Tool
 
 Sometimes the hardest part of building a product isn't the coding—it's knowing when to stop and ask: "Am I building the right thing?"
@@ -75,7 +77,7 @@ Working on this **Python app development** project taught me that domain experti
 
 The refactoring process was painful but necessary. I couldn't **manage technical debt** by pushing it to future versions. Clean architecture isn't just academic theory; it's survival for any product that plans to evolve.
 
-Now I have a completed CLI module with comprehensive tests, and I'm close to releasing the first version. The journey from bloated platform to focused tool has been humbling but educational.
+Now I have a completed CLI module with comprehensive tests, and the first version has been released on GitHub and PyPI. The journey from bloated platform to focused tool has been humbling but educational. See: [ValidateLite on GitHub](https://github.com/litedatum/validatelite).
 
 ## What's Next for the data validation tool
 
@@ -86,6 +88,13 @@ The new **ValidateLite** embodies everything I originally wanted: **lightweight 
 - CLI-first design for developer workflows  
 - Minimal dependencies and fast startup
 - Extensible rule engine architecture
+
+### Quick Start (Current)
+
+```bash
+pip install validatelite
+vlite check data.csv --rule "not_null(id)" --rule "unique(email)"
+```
 
 ## The Real Lessons
 

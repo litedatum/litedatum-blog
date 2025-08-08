@@ -164,7 +164,7 @@ Reserve heavy external engines for:
 - **Custom Business Logic**: Domain-specific calculations that can't be expressed in SQL
 - **Legacy Integration**: Working with systems that don't support modern SQL pushdown
 
-## Building the MVP: A Pushdown-First Data Quality Tool
+## Validatelite: A Pushdown-First Data Quality Tool
 
 This philosophy drives the architecture of our data validation MVP—a CLI tool designed around the principle of database-native processing. The core insight: instead of building another distributed processing framework, we built a SQL generation engine.
 
@@ -202,7 +202,9 @@ The tool works by:
 
 This compiles to optimized SQL that leverages database indexes, parallel processing, and query optimization. The result: validation rules that execute in seconds rather than minutes, with minimal infrastructure overhead.
 
-The MVP supports multiple database dialects (MySQL, PostgreSQL, SQLite) and handles flat files by automatically loading them into SQLite—maintaining the SQL-first approach even for non-database sources.
+Validatelite supports multiple database dialects (MySQL, PostgreSQL, SQLite) and handles flat files by automatically loading them into SQLite—maintaining the SQL-first approach even for non-database sources.
+
+> Update (2025-08-06): ValidateLite is now open source and released. GitHub: [litedatum/validatelite](https://github.com/litedatum/validatelite).
 
 ## The Decision Framework: When to Push, When to Pull
 

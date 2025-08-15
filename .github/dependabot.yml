@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: "bundler"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
   - package-ecosystem: "npm"
     directory: "/"
     versioning-strategy: increase
@@ -13,7 +13,7 @@ updates:
       dev-deps:
         dependency-type: development
     schedule:
-      interval: "weekly"
+      interval: "monthly"
   - package-ecosystem: "github-actions"
     directory: "/"
     groups:
@@ -21,7 +21,7 @@ updates:
         update-types:
           - "major"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
   - package-ecosystem: "devcontainers"
     directory: "/"
     schedule:

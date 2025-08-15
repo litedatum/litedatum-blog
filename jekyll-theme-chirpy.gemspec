@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f|
     f.match(%r!^((_(includes|layouts|sass|(data\/(locales|origin)))|assets)\/|README|LICENSE)!i)
-  }
+  }.map { |f| f.force_encoding('UTF-8') }
 
   spec.metadata = {
     "bug_tracker_uri"   => "https://github.com/cotes2020/jekyll-theme-chirpy/issues",

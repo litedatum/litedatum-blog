@@ -5,9 +5,22 @@ permalink: /robots.txt
 
 User-agent: *
 
+# Block admin and system directories
 Disallow: /norobots/
 Disallow: /cdn-cgi/
+Disallow: /assets/js/
+Disallow: /assets/css/
+
 # Disallow problematic pagination paths
 Disallow: /page*/
 
+# Block common Jekyll/GitHub Pages paths
+Disallow: /_site/
+Disallow: /node_modules/
+
+# Allow important directories
+Allow: /assets/img/
+Allow: /assets/
+
+# Sitemap location
 Sitemap: {{ '/sitemap.xml' | absolute_url }}

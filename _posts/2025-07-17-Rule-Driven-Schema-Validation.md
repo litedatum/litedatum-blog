@@ -39,6 +39,8 @@ Instead of overhauling your entire data infrastructure, what if you could catch 
 
 The core idea is straightforward: define your expected schema as simple JSON rules, then validate your data against these rules at critical pipeline checkpoints. When schema drift occurs, you catch it before it propagates downstream.
 
+**Update**: ValidateLite now includes a powerful **schema command** that provides comprehensive schema validation capabilities. [Learn more about the schema command →](https://github.com/litedatum/validatelite/blob/main/docs/USAGE.md#the-schema-command---schema-validation)
+
 ### Understanding Schema Components
 
 Before diving into the solution, let's break down what we're actually validating:
@@ -71,7 +73,7 @@ Later, during **Schema Validation**, new data gets checked against this schema. 
 
 ## ValidateLite: A Practical Implementation
 
-Rather than building another complex validation framework, I created **ValidateLite**—a lightweight tool that uses JSON rules to validate schema changes at pipeline checkpoints.
+Rather than building another complex validation framework, I created **ValidateLite**—a lightweight tool that uses JSON rules to validate schema changes at pipeline checkpoints. The tool now includes a **schema command** for comprehensive schema validation and drift detection.
 
 ### Step 1: Define Your Schema Rules
 
@@ -118,9 +120,9 @@ Run the validation against your data source:
 
 ```bash
 validate-lite check \
-  --source mysql://user:pass@host/db \
+  --source mysql://user:pass@host/db.user \
   --rules user_schema.json \
-  --output report.json
+  --output table
 ```
 
 ### Step 3: Review the Results
@@ -162,7 +164,7 @@ The key to effective schema validation is choosing the right checkpoints in your
 
 **Pre-ETL Output**: Check that intermediate processing results meet downstream requirements
 
-**Pre-Production Deployment**: Run schema snapshots and diff comparisons in staging environments
+**Pre-Production Deployment**: Run schema snapshots and diff comparisons in staging environments using ValidateLite's [schema command](https://github.com/litedatum/validatelite/blob/main/docs/USAGE.md#the-schema-command---schema-validation)
 
 **Real-time Stream Processing**: Validate incoming data streams against expected schemas
 
@@ -239,19 +241,23 @@ Like any lightweight solution, this approach has certain limitations that are wo
 
 **The 80/20 Principle**: Our philosophy is simple—solve 80% of schema drift problems with 20% of the effort. Perfect coverage isn't always worth the complexity cost.
 
-## Future Roadmap: Advanced Validation Features
+## Current Capabilities and Future Roadmap
 
-As ValidateLite evolves, we're planning to address these limitations with more sophisticated capabilities:
+ValidateLite has evolved significantly, and many of the advanced features we initially planned are now available through the **schema command**.
 
-**Cross-Database Schema Validation**: We're developing support for **heterogeneous database schema comparison** that will automatically map field types across different database systems and generate visual diff reports showing structural inconsistencies.
+**Cross-Database Schema Validation**: The schema command now provides **heterogeneous database schema comparison** with automatic type mapping between PostgreSQL, MySQL, SQLite, and other systems. [Learn more about schema validation capabilities →](https://github.com/litedatum/validatelite/blob/main/docs/USAGE.md#the-schema-command---schema-validation)
 
-This upcoming feature will include:
-- **Cross-database schema scanning** to detect differences
+Current schema command capabilities include:
+- **Cross-database schema scanning** to detect structural differences
 - **Automatic type mapping** between PostgreSQL, MySQL, SQLite, and other systems  
+- **Detailed change reporting** with JSON output for automation
+- **Schema drift detection** with comprehensive validation results
+
+Future enhancements will include:
 - **Visual diff reporting** that highlights structural changes
 - **Semi-structured data schema inference** for JSON and document databases
 
-These enhancements will be especially valuable for organizations managing data across multiple database platforms or migrating between systems, while maintaining the lightweight philosophy that makes ValidateLite practical for everyday use.
+These capabilities make ValidateLite especially valuable for organizations managing data across multiple database platforms or migrating between systems, while maintaining the lightweight philosophy that makes it practical for everyday use.
 
 ## Building Your Schema Firewall
 
@@ -264,10 +270,15 @@ ValidateLite represents a new approach to data validation—one that prioritizes
 - **Rule-driven**: Configure validation logic through JSON files, not code
 - **Flexible deployment**: Works in both batch and streaming contexts
 - **Fast feedback**: Get validation results in seconds, not hours
+- **Schema validation**: Comprehensive schema drift detection with the [schema command](https://github.com/litedatum/validatelite/blob/main/docs/USAGE.md#the-schema-command---schema-validation)
 
 The next time someone changes a field type upstream, you'll catch it before it breaks your pipeline. Your data engineers will thank you, your analysts will trust their dashboards, and your finance team will get their morning reports on time.
 
 Ready to stop schema drift in its tracks? Start with a simple rule file and see how lightweight validation can solve heavyweight problems.
+
+## Further Reading
+
+- [What is Schema Drift? The Ultimate Guide: From Detection to Prevention](https://litedatum.com/what-is-schema-drift) - A comprehensive guide to understanding schema drift and how to move from detection to prevention
 
 ---
 

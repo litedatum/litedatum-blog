@@ -1,0 +1,462 @@
+2025-08-18T02:40:22.43805Z	Cloning repository...
+2025-08-18T02:40:23.380047Z	From https://github.com/litedatum/litedatum-blog
+2025-08-18T02:40:23.380459Z	 * branch            28fdd5c3dc19131ca021e001ddf7bd4463794fec -> FETCH_HEAD
+2025-08-18T02:40:23.380571Z	
+2025-08-18T02:40:23.447496Z	HEAD is now at 28fdd5c chore: add link in recent post
+2025-08-18T02:40:23.447933Z	
+2025-08-18T02:40:24.922136Z	Submodule 'assets/lib' (https://github.com/cotes2020/chirpy-static-assets.git) registered for path 'assets/lib'
+2025-08-18T02:40:24.922937Z	Cloning into '/opt/buildhome/clone/assets/lib'...
+2025-08-18T02:40:24.923135Z	Submodule path 'assets/lib': checked out '02f4ada65dc75197654c3265a37a6f5fbc39f17c'
+2025-08-18T02:40:24.923622Z	
+2025-08-18T02:40:24.923754Z	Using v2 root directory strategy
+2025-08-18T02:40:24.946457Z	Success: Finished cloning repository files
+2025-08-18T02:40:26.700647Z	Checking for configuration in a Wrangler configuration file (BETA)
+2025-08-18T02:40:26.701292Z	
+2025-08-18T02:40:26.703101Z	Found wrangler.toml file. Reading build configuration...
+2025-08-18T02:40:26.790611Z	[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mParseError: Unterminated inline array[0m
+2025-08-18T02:40:26.790983Z	
+2025-08-18T02:40:26.791106Z	      at parseTOML (/opt/pages/build_tool/js/node_modules/wrangler/wrangler-dist/cli.js:129392:11)
+2025-08-18T02:40:26.79121Z	      at experimental_readRawConfig (/opt/pages/build_tool/js/node_modules/wrangler/wrangler-dist/cli.js:134162:17)
+2025-08-18T02:40:26.791358Z	      at readPagesConfig (/opt/pages/build_tool/js/node_modules/wrangler/wrangler-dist/cli.js:134111:50)
+2025-08-18T02:40:26.792035Z	      at Object.Handler [as handler] (/opt/pages/build_tool/js/node_modules/wrangler/wrangler-dist/cli.js:167118:14)
+2025-08-18T02:40:26.792202Z	      at /opt/pages/build_tool/js/node_modules/wrangler/wrangler-dist/cli.js:145791:46
+2025-08-18T02:40:26.792306Z	      at maybeAsyncResult (/opt/pages/build_tool/js/node_modules/wrangler/wrangler-dist/cli.js:145590:83)
+2025-08-18T02:40:26.792397Z	      at CommandInstance.handleValidationAndGetResult (/opt/pages/build_tool/js/node_modules/wrangler/wrangler-dist/cli.js:145790:19)
+2025-08-18T02:40:26.792458Z	      at CommandInstance.applyMiddlewareAndGetResult (/opt/pages/build_tool/js/node_modules/wrangler/wrangler-dist/cli.js:145821:243)
+2025-08-18T02:40:26.792516Z	      at CommandInstance.runCommand (/opt/pages/build_tool/js/node_modules/wrangler/wrangler-dist/cli.js:145728:212)
+2025-08-18T02:40:26.792572Z	      at YargsInstance.[runYargsParserAndExecuteCommands] (/opt/pages/build_tool/js/node_modules/wrangler/wrangler-dist/cli.js:148544:92) {
+2025-08-18T02:40:26.792647Z	    text: 'Unterminated inline array',
+2025-08-18T02:40:26.792707Z	    notes: [],
+2025-08-18T02:40:26.792766Z	    location: {
+2025-08-18T02:40:26.792935Z	      lineText: 'cache_key = {',
+2025-08-18T02:40:26.793046Z	      line: 29,
+2025-08-18T02:40:26.793109Z	      column: 12,
+2025-08-18T02:40:26.793165Z	      file: '/opt/buildhome/repo/wrangler.toml',
+2025-08-18T02:40:26.793221Z	      fileText: '# Cloudflare Pages Configuration\n' +
+2025-08-18T02:40:26.793277Z	        '\n' +
+2025-08-18T02:40:26.793346Z	        'name = "litedatum-blog"\n' +
+2025-08-18T02:40:26.793404Z	        'compatibility_date = "2024-12-01"\n' +
+2025-08-18T02:40:26.793475Z	        '\n' +
+2025-08-18T02:40:26.793534Z	        '[env.production]\n' +
+2025-08-18T02:40:26.793593Z	        'routes = [\n' +
+2025-08-18T02:40:26.793657Z	        '  { pattern = "blog.litedatum.com/*", zone_name = "litedatum.com" }\n' +
+2025-08-18T02:40:26.793732Z	        ']\n' +
+2025-08-18T02:40:26.793791Z	        '\n' +
+2025-08-18T02:40:26.793847Z	        '# Build configuration for Cloudflare Pages\n' +
+2025-08-18T02:40:26.793904Z	        '[build]\n' +
+2025-08-18T02:40:26.794056Z	        'command = "bash build.sh"\n' +
+2025-08-18T02:40:26.794151Z	        'cwd = ""\n' +
+2025-08-18T02:40:26.794212Z	        'watch_dir = "."\n' +
+2025-08-18T02:40:26.79427Z	        '\n' +
+2025-08-18T02:40:26.794327Z	        '[build.environment]\n' +
+2025-08-18T02:40:26.794383Z	        'NODE_VERSION = "18"\n' +
+2025-08-18T02:40:26.794442Z	        'RUBY_VERSION = "3.1.0"\n' +
+2025-08-18T02:40:26.794537Z	        'JEKYLL_ENV = "production"\n' +
+2025-08-18T02:40:26.79462Z	        '\n' +
+2025-08-18T02:40:26.794692Z	        '# Cache configuration\n' +
+2025-08-18T02:40:26.794751Z	        '[[rules]]\n' +
+2025-08-18T02:40:26.794808Z	        'type = "Transform"\n' +
+2025-08-18T02:40:26.794878Z	        'enabled = true\n' +
+2025-08-18T02:40:26.794964Z	        '\n' +
+2025-08-18T02:40:26.795029Z	        '[rules.action_parameters]\n' +
+2025-08-18T02:40:26.795098Z	        'cache = true\n' +
+2025-08-18T02:40:26.795153Z	        'cache_key = {\n' +
+2025-08-18T02:40:26.795208Z	        '  include_query_string = { include = ["*"] }\n' +
+2025-08-18T02:40:26.795262Z	        '}\n' +
+2025-08-18T02:40:26.79532Z	        '\n' +
+2025-08-18T02:40:26.795374Z	        '# Security headers\n' +
+2025-08-18T02:40:26.795427Z	        '[[headers]]\n' +
+2025-08-18T02:40:26.795481Z	        'name = "/*"\n' +
+2025-08-18T02:40:26.795534Z	        'value = "X-Frame-Options: DENY"\n' +
+2025-08-18T02:40:26.795588Z	        '\n' +
+2025-08-18T02:40:26.795651Z	        '[[headers]]\n' +
+2025-08-18T02:40:26.795705Z	        'name = "/*"\n' +
+2025-08-18T02:40:26.79577Z	        'value = "X-Content-Type-Options: nosniff"\n'
+2025-08-18T02:40:26.795825Z	    },
+2025-08-18T02:40:26.795879Z	    kind: 'error'
+2025-08-18T02:40:26.795952Z	  }
+2025-08-18T02:40:26.796015Z	
+2025-08-18T02:40:26.796072Z	
+2025-08-18T02:40:27.907081Z	🪵  Logs were written to "/root/.config/.wrangler/logs/wrangler-2025-08-18_02-40-26_458.log"
+2025-08-18T02:40:27.921769Z	A wrangler.toml file was found but it does not appear to be valid. Did you mean to use wrangler.toml to configure Pages? If so, then make sure the file is valid and contains the `pages_build_output_dir` property. Skipping file and continuing.
+2025-08-18T02:40:29.133388Z	Preparing yarn@3.6.3 for immediate activation...
+2025-08-18T02:40:29.446347Z	Preparing pnpm@8.7.1 for immediate activation...
+2025-08-18T02:40:29.734492Z	Detected the following tools from environment: nodejs@18.20.8, ruby@3.1.0, npm@9.6.7
+2025-08-18T02:40:29.734773Z	Installing nodejs 18.20.8
+2025-08-18T02:40:30.864256Z	Trying to update node-build... ok
+2025-08-18T02:40:30.974283Z	To follow progress, use 'tail -f /tmp/node-build.20250818024030.1133.log' or pass --verbose
+2025-08-18T02:40:31.089099Z	Downloading node-v18.20.8-linux-x64.tar.gz...
+2025-08-18T02:40:31.344326Z	-> https://nodejs.org/dist/v18.20.8/node-v18.20.8-linux-x64.tar.gz
+2025-08-18T02:40:33.178292Z	
+2025-08-18T02:40:33.17856Z	WARNING: node-v18.20.8-linux-x64 is in LTS Maintenance mode and nearing its end of life.
+2025-08-18T02:40:33.178849Z	It only receives *critical* security updates, *critical* bug fixes and documentation updates.
+2025-08-18T02:40:33.179012Z	
+2025-08-18T02:40:33.179158Z	Installing node-v18.20.8-linux-x64...
+2025-08-18T02:40:33.554204Z	Installed node-v18.20.8-linux-x64 to /opt/buildhome/.asdf/installs/nodejs/18.20.8
+2025-08-18T02:40:33.554515Z	
+2025-08-18T02:40:34.696316Z	Installing ruby 3.1.0
+2025-08-18T02:40:35.12276Z	==> Downloading ruby-3.1.0.tar.gz...
+2025-08-18T02:40:35.127011Z	-> curl -q -fL -o ruby-3.1.0.tar.gz https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.0.tar.gz
+2025-08-18T02:40:35.136565Z	  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-08-18T02:40:35.136737Z	                                 Dload  Upload   Total   Spent    Left  Speed
+2025-08-18T02:40:36.206989Z	
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+ 15 19.1M   15 2969k    0     0  3381k      0  0:00:05 --:--:--  0:00:05 3378k
+100 19.1M  100 19.1M    0     0  17.9M      0  0:00:01  0:00:01 --:--:-- 17.9M
+2025-08-18T02:40:36.989147Z	==> Installing ruby-3.1.0...
+2025-08-18T02:40:36.989468Z	
+2025-08-18T02:40:36.989601Z	WARNING: ruby-3.1.0 is past its end of life and is now unsupported.
+2025-08-18T02:40:36.989797Z	It no longer receives bug fixes or critical security updates.
+2025-08-18T02:40:36.989997Z	
+2025-08-18T02:40:37.064594Z	-> ./configure "--prefix=$HOME/.asdf/installs/ruby/3.1.0" --enable-shared --with-ext=openssl,psych,+
+2025-08-18T02:41:25.133354Z	-> make -j 8
+2025-08-18T02:44:07.303629Z	-> make install
+2025-08-18T02:44:40.532187Z	==> Installed ruby-3.1.0 to /opt/buildhome/.asdf/installs/ruby/3.1.0
+2025-08-18T02:44:41.590997Z	Installing project dependencies: npm install --progress=false
+2025-08-18T02:44:55.912878Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.913158Z	npm warn EBADENGINE   package: 'semantic-release@24.2.7',
+2025-08-18T02:44:55.913303Z	npm warn EBADENGINE   required: { node: '>=20.8.1' },
+2025-08-18T02:44:55.913593Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.913705Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.913827Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.913965Z	npm warn EBADENGINE   package: '@semantic-release/exec@7.1.0',
+2025-08-18T02:44:55.914089Z	npm warn EBADENGINE   required: { node: '>=20.8.1' },
+2025-08-18T02:44:55.914192Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.914287Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.914443Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.914549Z	npm warn EBADENGINE   package: 'stylelint-config-standard-scss@15.0.1',
+2025-08-18T02:44:55.914767Z	npm warn EBADENGINE   required: { node: '>=20' },
+2025-08-18T02:44:55.914964Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.915068Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.916187Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.916394Z	npm warn EBADENGINE   package: 'glob@11.0.3',
+2025-08-18T02:44:55.916489Z	npm warn EBADENGINE   required: { node: '20 || >=22' },
+2025-08-18T02:44:55.916557Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.916675Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.916861Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.916975Z	npm warn EBADENGINE   package: 'jackspeak@4.1.1',
+2025-08-18T02:44:55.917039Z	npm warn EBADENGINE   required: { node: '20 || >=22' },
+2025-08-18T02:44:55.917098Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.917157Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.917215Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.917275Z	npm warn EBADENGINE   package: 'minimatch@10.0.3',
+2025-08-18T02:44:55.917333Z	npm warn EBADENGINE   required: { node: '20 || >=22' },
+2025-08-18T02:44:55.917388Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.917454Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.917515Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.917575Z	npm warn EBADENGINE   package: 'path-scurry@2.0.0',
+2025-08-18T02:44:55.917636Z	npm warn EBADENGINE   required: { node: '20 || >=22' },
+2025-08-18T02:44:55.917696Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.917759Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.917822Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.917892Z	npm warn EBADENGINE   package: '@isaacs/brace-expansion@5.0.0',
+2025-08-18T02:44:55.91798Z	npm warn EBADENGINE   required: { node: '20 || >=22' },
+2025-08-18T02:44:55.918038Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.918093Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.918155Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.918216Z	npm warn EBADENGINE   package: '@isaacs/balanced-match@4.0.1',
+2025-08-18T02:44:55.918276Z	npm warn EBADENGINE   required: { node: '20 || >=22' },
+2025-08-18T02:44:55.918336Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.918392Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.918457Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.918517Z	npm warn EBADENGINE   package: 'lru-cache@11.1.0',
+2025-08-18T02:44:55.91858Z	npm warn EBADENGINE   required: { node: '20 || >=22' },
+2025-08-18T02:44:55.918636Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.91869Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.918745Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.9188Z	npm warn EBADENGINE   package: '@semantic-release/commit-analyzer@13.0.1',
+2025-08-18T02:44:55.918859Z	npm warn EBADENGINE   required: { node: '>=20.8.1' },
+2025-08-18T02:44:55.918924Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.918991Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.919271Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.919358Z	npm warn EBADENGINE   package: '@semantic-release/github@11.0.4',
+2025-08-18T02:44:55.919418Z	npm warn EBADENGINE   required: { node: '>=20.8.1' },
+2025-08-18T02:44:55.919473Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.919538Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.9196Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.91966Z	npm warn EBADENGINE   package: '@semantic-release/npm@12.0.2',
+2025-08-18T02:44:55.919725Z	npm warn EBADENGINE   required: { node: '>=20.8.1' },
+2025-08-18T02:44:55.91978Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.919834Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.919897Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.91997Z	npm warn EBADENGINE   package: '@semantic-release/release-notes-generator@14.0.3',
+2025-08-18T02:44:55.920079Z	npm warn EBADENGINE   required: { node: '>=20.8.1' },
+2025-08-18T02:44:55.920139Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.920194Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.920255Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.920318Z	npm warn EBADENGINE   package: '@octokit/core@7.0.3',
+2025-08-18T02:44:55.92042Z	npm warn EBADENGINE   required: { node: '>= 20' },
+2025-08-18T02:44:55.920475Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.920541Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.920596Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.92065Z	npm warn EBADENGINE   package: '@octokit/plugin-paginate-rest@13.1.1',
+2025-08-18T02:44:55.920715Z	npm warn EBADENGINE   required: { node: '>= 20' },
+2025-08-18T02:44:55.920775Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.920832Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.920897Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.920972Z	npm warn EBADENGINE   package: '@octokit/plugin-retry@8.0.1',
+2025-08-18T02:44:55.921034Z	npm warn EBADENGINE   required: { node: '>= 20' },
+2025-08-18T02:44:55.921091Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.921159Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.921215Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.921271Z	npm warn EBADENGINE   package: '@octokit/plugin-throttling@11.0.1',
+2025-08-18T02:44:55.92133Z	npm warn EBADENGINE   required: { node: '>= 20' },
+2025-08-18T02:44:55.921386Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.921443Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.921501Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.921555Z	npm warn EBADENGINE   package: '@octokit/auth-token@6.0.0',
+2025-08-18T02:44:55.921614Z	npm warn EBADENGINE   required: { node: '>= 20' },
+2025-08-18T02:44:55.921668Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.921728Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.921789Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.921843Z	npm warn EBADENGINE   package: '@octokit/graphql@9.0.1',
+2025-08-18T02:44:55.921915Z	npm warn EBADENGINE   required: { node: '>= 20' },
+2025-08-18T02:44:55.921992Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.922051Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.922108Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.922167Z	npm warn EBADENGINE   package: '@octokit/request@10.0.3',
+2025-08-18T02:44:55.922221Z	npm warn EBADENGINE   required: { node: '>= 20' },
+2025-08-18T02:44:55.922275Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.92233Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.922387Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.92244Z	npm warn EBADENGINE   package: '@octokit/request-error@7.0.0',
+2025-08-18T02:44:55.922497Z	npm warn EBADENGINE   required: { node: '>= 20' },
+2025-08-18T02:44:55.922552Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.922612Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.922668Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.922723Z	npm warn EBADENGINE   package: '@octokit/endpoint@11.0.0',
+2025-08-18T02:44:55.922777Z	npm warn EBADENGINE   required: { node: '>= 20' },
+2025-08-18T02:44:55.922834Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.922895Z	npm warn EBADENGINE }
+2025-08-18T02:44:55.923002Z	npm warn EBADENGINE Unsupported engine {
+2025-08-18T02:44:55.923078Z	npm warn EBADENGINE   package: 'stylelint-config-recommended-scss@15.0.1',
+2025-08-18T02:44:55.923178Z	npm warn EBADENGINE   required: { node: '>=20' },
+2025-08-18T02:44:55.923349Z	npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-08-18T02:44:55.923471Z	npm warn EBADENGINE }
+2025-08-18T02:45:03.651782Z	
+2025-08-18T02:45:03.652113Z	> jekyll-theme-chirpy@7.3.0 prepare
+2025-08-18T02:45:03.652253Z	> husky
+2025-08-18T02:45:03.652359Z	
+2025-08-18T02:45:03.749016Z	
+2025-08-18T02:45:03.749263Z	added 647 packages, and audited 856 packages in 22s
+2025-08-18T02:45:03.749862Z	
+2025-08-18T02:45:03.749992Z	149 packages are looking for funding
+2025-08-18T02:45:03.750351Z	  run `npm fund` for details
+2025-08-18T02:45:03.751527Z	
+2025-08-18T02:45:03.751726Z	found 0 vulnerabilities
+2025-08-18T02:45:03.77768Z	Installing project dependencies: bundle install
+2025-08-18T02:45:07.145856Z	Fetching gem metadata from https://rubygems.org/..........
+2025-08-18T02:45:07.467446Z	Resolving dependencies...
+2025-08-18T02:45:07.481077Z	Fetching rake 13.3.0
+2025-08-18T02:45:07.53756Z	Installing rake 13.3.0
+2025-08-18T02:45:07.581195Z	Fetching Ascii85 2.0.1
+2025-08-18T02:45:07.583833Z	Fetching public_suffix 6.0.2
+2025-08-18T02:45:07.585808Z	Fetching afm 0.2.2
+2025-08-18T02:45:07.588132Z	Fetching fiber-storage 1.0.1
+2025-08-18T02:45:07.590488Z	Fetching json 2.13.2
+2025-08-18T02:45:07.592686Z	Fetching io-event 1.11.2
+2025-08-18T02:45:07.593138Z	Fetching metrics 0.12.2
+2025-08-18T02:45:07.595058Z	Fetching fiber-annotation 0.2.0
+2025-08-18T02:45:07.633545Z	Installing metrics 0.12.2
+2025-08-18T02:45:07.645965Z	Fetching traces 0.15.2
+2025-08-18T02:45:07.648907Z	Installing json 2.13.2 with native extensions
+2025-08-18T02:45:07.848983Z	Installing afm 0.2.2
+2025-08-18T02:45:07.862347Z	Installing fiber-storage 1.0.1
+2025-08-18T02:45:07.87409Z	Installing fiber-annotation 0.2.0
+2025-08-18T02:45:07.882164Z	Fetching base64 0.3.0
+2025-08-18T02:45:07.886711Z	Installing public_suffix 6.0.2
+2025-08-18T02:45:07.889795Z	Fetching bigdecimal 3.2.2
+2025-08-18T02:45:07.895806Z	Using bundler 2.3.3
+2025-08-18T02:45:07.896729Z	Fetching colorator 1.1.0
+2025-08-18T02:45:07.909712Z	Fetching concurrent-ruby 1.3.5
+2025-08-18T02:45:07.931083Z	Installing base64 0.3.0
+2025-08-18T02:45:07.936515Z	Fetching csv 3.3.5
+2025-08-18T02:45:07.941795Z	Installing colorator 1.1.0
+2025-08-18T02:45:07.947976Z	Fetching eventmachine 1.2.7
+2025-08-18T02:45:07.991229Z	Installing csv 3.3.5
+2025-08-18T02:45:08.007511Z	Installing Ascii85 2.0.1
+2025-08-18T02:45:08.027478Z	Installing io-event 1.11.2 with native extensions
+2025-08-18T02:45:08.038331Z	Fetching http_parser.rb 0.8.0
+2025-08-18T02:45:08.070795Z	Fetching ffi 1.17.2
+2025-08-18T02:45:08.10378Z	Installing traces 0.15.2
+2025-08-18T02:45:08.134396Z	Fetching forwardable-extended 2.6.0
+2025-08-18T02:45:08.139537Z	Installing http_parser.rb 0.8.0 with native extensions
+2025-08-18T02:45:08.220528Z	Installing forwardable-extended 2.6.0
+2025-08-18T02:45:08.242001Z	Fetching hashery 2.1.2
+2025-08-18T02:45:08.251905Z	Installing concurrent-ruby 1.3.5
+2025-08-18T02:45:08.296104Z	Installing hashery 2.1.2
+2025-08-18T02:45:08.360111Z	Installing bigdecimal 3.2.2 with native extensions
+2025-08-18T02:45:08.446926Z	Installing eventmachine 1.2.7 with native extensions
+2025-08-18T02:45:08.537859Z	Fetching mini_portile2 2.8.9
+2025-08-18T02:45:08.629748Z	Installing mini_portile2 2.8.9
+2025-08-18T02:45:08.683349Z	Installing ffi 1.17.2 with native extensions
+2025-08-18T02:45:08.781371Z	Fetching racc 1.8.1
+2025-08-18T02:45:08.795615Z	Fetching ruby-rc4 0.1.5
+2025-08-18T02:45:08.862724Z	Installing ruby-rc4 0.1.5
+2025-08-18T02:45:08.871207Z	Installing racc 1.8.1 with native extensions
+2025-08-18T02:45:08.893612Z	Fetching rainbow 3.1.1
+2025-08-18T02:45:08.977007Z	Installing rainbow 3.1.1
+2025-08-18T02:45:09.129779Z	Fetching yell 2.2.2
+2025-08-18T02:45:09.17764Z	Installing yell 2.2.2
+2025-08-18T02:45:09.340023Z	Fetching zeitwerk 2.6.18
+2025-08-18T02:45:09.441297Z	Installing zeitwerk 2.6.18
+2025-08-18T02:45:09.528643Z	Fetching rb-fsevent 0.11.2
+2025-08-18T02:45:09.628969Z	Installing rb-fsevent 0.11.2
+2025-08-18T02:45:09.731518Z	Fetching rexml 3.4.1
+2025-08-18T02:45:09.832237Z	Installing rexml 3.4.1
+2025-08-18T02:45:10.035926Z	Fetching liquid 4.0.4
+2025-08-18T02:45:10.143087Z	Installing liquid 4.0.4
+2025-08-18T02:45:10.476755Z	Fetching mercenary 0.4.0
+2025-08-18T02:45:10.560671Z	Installing mercenary 0.4.0
+2025-08-18T02:45:10.656197Z	Fetching rouge 4.6.0
+2025-08-18T02:45:10.668828Z	Fetching safe_yaml 1.0.5
+2025-08-18T02:45:10.950599Z	Fetching unicode-display_width 2.6.0
+2025-08-18T02:45:10.969954Z	Installing safe_yaml 1.0.5
+2025-08-18T02:45:10.993526Z	Installing unicode-display_width 2.6.0
+2025-08-18T02:45:11.058986Z	Fetching webrick 1.9.1
+2025-08-18T02:45:11.088394Z	Installing rouge 4.6.0
+2025-08-18T02:45:11.144731Z	Installing webrick 1.9.1
+2025-08-18T02:45:11.151281Z	Fetching jekyll-paginate 1.1.0
+2025-08-18T02:45:11.233488Z	Installing jekyll-paginate 1.1.0
+2025-08-18T02:45:11.333369Z	Fetching fiber-local 1.1.0
+2025-08-18T02:45:11.361011Z	Fetching addressable 2.8.7
+2025-08-18T02:45:11.381242Z	Installing fiber-local 1.1.0
+2025-08-18T02:45:11.430022Z	Fetching pathutil 0.16.2
+2025-08-18T02:45:11.475723Z	Installing pathutil 0.16.2
+2025-08-18T02:45:11.493863Z	Fetching i18n 1.14.7
+2025-08-18T02:45:11.569389Z	Installing i18n 1.14.7
+2025-08-18T02:45:11.728889Z	Installing addressable 2.8.7
+2025-08-18T02:45:11.764709Z	Fetching kramdown 2.5.1
+2025-08-18T02:45:11.846499Z	Fetching nokogiri 1.18.9
+2025-08-18T02:45:11.943919Z	Installing kramdown 2.5.1
+2025-08-18T02:45:12.579099Z	Installing nokogiri 1.18.9 with native extensions
+2025-08-18T02:45:12.64147Z	Fetching terminal-table 3.0.2
+2025-08-18T02:45:12.727175Z	Installing terminal-table 3.0.2
+2025-08-18T02:45:14.236816Z	Fetching kramdown-parser-gfm 1.1.0
+2025-08-18T02:45:14.539471Z	Installing kramdown-parser-gfm 1.1.0
+2025-08-18T02:45:21.184518Z	Fetching console 1.30.2
+2025-08-18T02:45:21.46931Z	Installing console 1.30.2
+2025-08-18T02:45:21.53411Z	Fetching async 2.24.0
+2025-08-18T02:45:21.581806Z	Installing async 2.24.0
+2025-08-18T02:45:27.777277Z	Fetching ethon 0.16.0
+2025-08-18T02:45:27.778086Z	Fetching rb-inotify 0.11.1
+2025-08-18T02:45:27.844552Z	Installing rb-inotify 0.11.1
+2025-08-18T02:45:27.86202Z	Fetching listen 3.9.0
+2025-08-18T02:45:27.931387Z	Installing listen 3.9.0
+2025-08-18T02:45:27.954352Z	Fetching jekyll-watch 2.2.1
+2025-08-18T02:45:28.063693Z	Installing ethon 0.16.0
+2025-08-18T02:45:28.115028Z	Fetching typhoeus 1.4.1
+2025-08-18T02:45:28.224275Z	Installing jekyll-watch 2.2.1
+2025-08-18T02:45:28.236402Z	Fetching google-protobuf 4.32.0
+2025-08-18T02:45:28.238152Z	Fetching ttfunk 1.8.0
+2025-08-18T02:45:28.293181Z	Installing ttfunk 1.8.0
+2025-08-18T02:45:28.343352Z	Installing google-protobuf 4.32.0 with native extensions
+2025-08-18T02:45:28.420373Z	Installing typhoeus 1.4.1
+2025-08-18T02:45:28.42129Z	Fetching pdf-reader 2.15.0
+2025-08-18T02:45:28.652897Z	Installing pdf-reader 2.15.0
+2025-08-18T02:45:35.848365Z	Fetching em-websocket 0.5.3
+2025-08-18T02:45:36.126071Z	Installing em-websocket 0.5.3
+2025-08-18T02:45:40.919361Z	Fetching sass-embedded 1.90.0
+2025-08-18T02:45:40.964508Z	Installing sass-embedded 1.90.0 with native extensions
+2025-08-18T02:46:40.127706Z	Fetching html-proofer 5.0.10
+2025-08-18T02:46:40.172372Z	Installing html-proofer 5.0.10
+2025-08-18T02:46:40.196527Z	Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+2025-08-18T02:46:40.196782Z	
+2025-08-18T02:46:40.196957Z	current directory:
+2025-08-18T02:46:40.197226Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/gems/sass-embedded-1.90.0/ext/sass
+2025-08-18T02:46:40.197349Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/bin/ruby
+2025-08-18T02:46:40.197414Z	-I/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0 -rrubygems
+2025-08-18T02:46:40.197503Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/gems/rake-13.3.0/exe/rake
+2025-08-18T02:46:40.197784Z	RUBYARCHDIR\=/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/extensions/x86_64-linux/3.1.0/sass-embedded-1.90.0
+2025-08-18T02:46:40.197888Z	RUBYLIBDIR\=/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/extensions/x86_64-linux/3.1.0/sass-embedded-1.90.0
+2025-08-18T02:46:40.198047Z	gem install --force --install-dir
+2025-08-18T02:46:40.198237Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/gems/sass-embedded-1.90.0/ext/sass/ruby
+2025-08-18T02:46:40.19831Z	--no-document --ignore-dependencies --platform x86_64-linux-gnu --version 1.90.0
+2025-08-18T02:46:40.198629Z	sass-embedded
+2025-08-18T02:46:40.198713Z	rake aborted!
+2025-08-18T02:46:40.199002Z	NameError: uninitialized constant JSON::Fragment
+2025-08-18T02:46:40.199084Z	<internal:/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/rubygems/core_ext/kernel_require.rb>:85:in
+2025-08-18T02:46:40.199144Z	`require'
+2025-08-18T02:46:40.19937Z	<internal:/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/rubygems/core_ext/kernel_require.rb>:85:in
+2025-08-18T02:46:40.199469Z	`require'
+2025-08-18T02:46:40.199599Z	<internal:/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/rubygems/core_ext/kernel_require.rb>:85:in
+2025-08-18T02:46:40.199663Z	`require'
+2025-08-18T02:46:40.199834Z	<internal:/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/rubygems/core_ext/kernel_require.rb>:85:in
+2025-08-18T02:46:40.199916Z	`require'
+2025-08-18T02:46:40.200017Z	<internal:/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/rubygems/core_ext/kernel_require.rb>:85:in
+2025-08-18T02:46:40.200155Z	`require'
+2025-08-18T02:46:40.200326Z	<internal:/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/rubygems/core_ext/kernel_require.rb>:85:in
+2025-08-18T02:46:40.200441Z	`require'
+2025-08-18T02:46:40.200557Z	
+2025-08-18T02:46:40.200656Z	Caused by:
+2025-08-18T02:46:40.200781Z	Gem::UnsatisfiableDependencyError: Unable to resolve dependency: user requested
+2025-08-18T02:46:40.200886Z	'sass-embedded (= 1.90.0)'
+2025-08-18T02:46:40.201068Z	
+2025-08-18T02:46:40.2012Z	Tasks: TOP => dart-sass/sass
+2025-08-18T02:46:40.201334Z	(See full trace by running task with --trace)
+2025-08-18T02:46:40.201468Z	rm -rf
+2025-08-18T02:46:40.201757Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/gems/sass-embedded-1.90.0/ext/sass/ruby
+2025-08-18T02:46:40.201882Z	
+2025-08-18T02:46:40.202003Z	rake failed, exit code 1
+2025-08-18T02:46:40.202112Z	
+2025-08-18T02:46:40.202204Z	Gem files will remain installed in
+2025-08-18T02:46:40.202299Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/gems/sass-embedded-1.90.0
+2025-08-18T02:46:40.202401Z	for inspection.
+2025-08-18T02:46:40.202503Z	Results logged to
+2025-08-18T02:46:40.202599Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/extensions/x86_64-linux/3.1.0/sass-embedded-1.90.0/gem_make.out
+2025-08-18T02:46:40.202731Z	
+2025-08-18T02:46:40.202832Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/rubygems/ext/builder.rb:95:in
+2025-08-18T02:46:40.202923Z	`run'
+2025-08-18T02:46:40.203118Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/rubygems/ext/rake_builder.rb:28:in
+2025-08-18T02:46:40.203218Z	`build'
+2025-08-18T02:46:40.203314Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/rubygems/ext/builder.rb:161:in
+2025-08-18T02:46:40.203407Z	`build_extension'
+2025-08-18T02:46:40.203516Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/rubygems/ext/builder.rb:195:in
+2025-08-18T02:46:40.203657Z	`block in build_extensions'
+2025-08-18T02:46:40.203766Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/rubygems/ext/builder.rb:192:in
+2025-08-18T02:46:40.203895Z	`each'
+2025-08-18T02:46:40.204044Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/rubygems/ext/builder.rb:192:in
+2025-08-18T02:46:40.204154Z	`build_extensions'
+2025-08-18T02:46:40.204278Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/rubygems/installer.rb:847:in
+2025-08-18T02:46:40.204391Z	`build_extensions'
+2025-08-18T02:46:40.204553Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/bundler/rubygems_gem_installer.rb:71:in
+2025-08-18T02:46:40.20467Z	`build_extensions'
+2025-08-18T02:46:40.204845Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/bundler/rubygems_gem_installer.rb:28:in
+2025-08-18T02:46:40.204956Z	`install'
+2025-08-18T02:46:40.205052Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/bundler/source/rubygems.rb:204:in
+2025-08-18T02:46:40.205219Z	`install'
+2025-08-18T02:46:40.205345Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/bundler/installer/gem_installer.rb:54:in
+2025-08-18T02:46:40.205572Z	`install'
+2025-08-18T02:46:40.205694Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/bundler/installer/gem_installer.rb:16:in
+2025-08-18T02:46:40.205938Z	`install_from_spec'
+2025-08-18T02:46:40.206083Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/bundler/installer/parallel_installer.rb:186:in
+2025-08-18T02:46:40.206197Z	`do_install'
+2025-08-18T02:46:40.206369Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/bundler/installer/parallel_installer.rb:177:in
+2025-08-18T02:46:40.206528Z	`block in worker_pool'
+2025-08-18T02:46:40.206652Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/bundler/worker.rb:62:in
+2025-08-18T02:46:40.206849Z	`apply_func'
+2025-08-18T02:46:40.207001Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/bundler/worker.rb:57:in
+2025-08-18T02:46:40.207142Z	`block in process_queue'
+2025-08-18T02:46:40.207271Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/bundler/worker.rb:54:in
+2025-08-18T02:46:40.207418Z	`loop'
+2025-08-18T02:46:40.207526Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/bundler/worker.rb:54:in
+2025-08-18T02:46:40.207652Z	`process_queue'
+2025-08-18T02:46:40.20798Z	/opt/buildhome/.asdf/installs/ruby/3.1.0/lib/ruby/3.1.0/bundler/worker.rb:91:in
+2025-08-18T02:46:40.208135Z	`block (2 levels) in create_threads'
+2025-08-18T02:46:40.208243Z	
+2025-08-18T02:46:40.208347Z	An error occurred while installing sass-embedded (1.90.0), and Bundler cannot
+2025-08-18T02:46:40.208476Z	continue.
+2025-08-18T02:46:40.208582Z	
+2025-08-18T02:46:40.208676Z	In Gemfile:
+2025-08-18T02:46:40.209249Z	  jekyll-theme-chirpy was resolved to 7.3.0, which depends on
+2025-08-18T02:46:40.209338Z	    jekyll-archives was resolved to 2.3.0, which depends on
+2025-08-18T02:46:40.209402Z	      jekyll was resolved to 4.4.1, which depends on
+2025-08-18T02:46:40.209798Z	        jekyll-sass-converter was resolved to 3.1.0, which depends on
+2025-08-18T02:46:40.209869Z	          sass-embedded
+2025-08-18T02:46:40.30439Z	Error: Exit with error code: 5
+2025-08-18T02:46:40.30466Z	    at ChildProcess.<anonymous> (/snapshot/dist/run-build.js)
+2025-08-18T02:46:40.304798Z	    at Object.onceWrapper (node:events:652:26)
+2025-08-18T02:46:40.304904Z	    at ChildProcess.emit (node:events:537:28)
+2025-08-18T02:46:40.305051Z	    at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2025-08-18T02:46:40.317091Z	Failed: build command exited with code: 1
+2025-08-18T02:46:41.504964Z	Failed: error occurred while running build command

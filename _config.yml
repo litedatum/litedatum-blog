@@ -185,22 +185,34 @@ defaults:
     values:
       comments: false
   - scope:
-      path: ""
+      path: "" # An empty string here means all files in the project
+      type: pages
+    values:
+      sitemap: false # Exclude most pages from sitemap
+  - scope:
+      path: "" # An empty string here means all files in the project
       type: tabs # see `site.collections`
     values:
       layout: page
       permalink: /:title/
       sitemap: false # Exclude tabs collection pages from sitemap
   - scope:
-      path: "" # Applies to all regular pages
-      type: pages
-    values:
-      sitemap: false # Exclude most pages from sitemap
-  - scope:
       path: "index.html" # Home page
       type: pages
     values:
       sitemap: true # Re-include home page in sitemap
+  - scope:
+      path: "" # An empty string here means all files in the project
+      type: tag
+    values:
+      robots: noindex
+      sitemap: false
+  - scope:
+      path: "" # An empty string here means all files in the project
+      type: category
+    values:
+      robots: noindex
+      sitemap: false
 
 sass:
   style: compressed
@@ -233,4 +245,12 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+# Enable Jekyll plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-include-cache
   

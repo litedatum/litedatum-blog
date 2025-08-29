@@ -14,12 +14,12 @@ timezone: America/New_York
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Lite Datum # Change to your blog title
+title: Litedatum-Simple Rules for Reliable Data
 
 tagline: data reconciliation and lightweight data validation # Change to your subtitle
 
 description: >- # used by seo meta and the atom feed
-  Focused on practical data quality. Explore articles on data reconciliation and find a simple, powerful data validation tool to ensure your data is accurate and reliable.
+  Your guide to lightweight data quality. Explore practical articles on schema validation, drift detection, and data reconciliation with a simple, powerful tool.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.

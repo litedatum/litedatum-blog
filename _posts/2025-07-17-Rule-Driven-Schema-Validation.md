@@ -81,36 +81,37 @@ Create a simple JSON file describing your expected schema:
 
 ```json
 {
-  "table": "users",
-  "rules": [
-    {
-      "field": "id",
-      "type": "integer",
-      "required": true
-    },
-    {
-      "field": "age",
-      "type": "integer",
-      "required": true,
-      "min": 0,
-      "max": 120
-    },
-    {
-      "field": "has_children",
-      "enum": [0, 1]
-    },
-    {
-      "field": "income",
-      "type": "float",
-      "required": true,
-      "min": 0
-    },
-    {
-      "field": "job_category",
-      "type": "string",
-      "enum": ["engineer", "teacher", "doctor", "other"]
-    }
-  ]
+  "users": {
+    "rules": [
+      {
+        "field": "id",
+        "type": "integer",
+        "required": true
+      },
+      {
+        "field": "age",
+         "type": "integer",
+        "required": true,
+        "min": 0,
+        "max": 120
+      },
+      {
+        "field": "has_children",
+        "enum": [0, 1]
+      },
+      {
+        "field": "income",
+        "type": "float",
+        "required": true,
+        "min": 0
+      },
+      {
+        "field": "job_category",
+        "type": "string",
+        "enum": ["engineer", "teacher", "doctor", "other"]
+      }
+    ]
+  }
 }
 ```
 
@@ -119,8 +120,9 @@ Create a simple JSON file describing your expected schema:
 Run the validation against your data source:
 
 ```bash
-validate-lite check \
-  --source mysql://user:pass@host/db.user \
+vlite check \
+  --conn mysql://user:pass@host/db \
+  --table user \
   --rules user_schema.json \
   --output table
 ```
@@ -146,8 +148,9 @@ The real power comes from integrating validation into your CI/CD pipeline:
 # In your data pipeline workflow
 - name: Validate Schema
   run: |
-    validate-lite check \
-      --source ${{ env.DATA_SOURCE }} \
+    vlite check \
+      --conn ${{ env.DATA_SOURCE }} \
+      --table production \
       --rules schemas/production.json
     
     if [ $? -ne 0 ]; then

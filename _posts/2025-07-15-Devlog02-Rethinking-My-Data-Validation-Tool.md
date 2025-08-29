@@ -93,7 +93,7 @@ The new **ValidateLite** embodies everything I originally wanted: **lightweight 
 
 ```bash
 pip install validatelite
-vlite check data.csv --rule "not_null(id)" --rule "unique(email)"
+vlite check --conn data.csv --table data --rule "not_null(id)" --rule "unique(email)"
 ```
 
 ## The Real Lessons

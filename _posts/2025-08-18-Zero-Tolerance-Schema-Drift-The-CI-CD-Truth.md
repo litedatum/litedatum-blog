@@ -61,7 +61,7 @@ This principle scales from individual database schema changes to complex multi-s
 Every automation starts with a simple command. [ValidateLite](https://github.com/litedatum/validatelite)'s CLI follows the UNIX philosophy: do one thing well, and compose with everything.
 
 ```bash
-vlite schema "postgresql://user:pass@test-db:5432/app.users" --rules schema.json
+vlite schema --conn "postgresql://user:pass@test-db:5432/app" --table users --rules schema.json
 ```
 
 This command becomes the foundation for any CI/CD integration. GitHub Actions, Azure DevOps Pipelines, Jenkins, GitLab CI—they all speak the same language: shell commands with exit codes.
@@ -138,7 +138,8 @@ jobs:
           
       - name: Validate schema compliance
         run: |
-          vlite schema "postgresql://postgres:test@localhost:5432/test.users" \
+          vlite schema --conn "postgresql://postgres:test@localhost:5432/test" \
+            --table users \
             --rules schemas/users_schema.json \
             --output json > validation_results.json
             
@@ -213,7 +214,8 @@ stages:
             displayName: 'Apply Test Migrations'
             
           - script: |
-              vlite schema "$(test-connection-string)" \
+              vlite schema --conn "$(test-connection-string)" \
+                --table production \
                 --rules schemas/production_schema.json \
                 --output json > $(Agent.TempDirectory)/validation_results.json
             displayName: 'Run Schema Validation'

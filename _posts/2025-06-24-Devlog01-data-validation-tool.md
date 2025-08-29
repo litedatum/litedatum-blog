@@ -95,7 +95,7 @@ The initial release is CLI-first, but the architecture supports future expansion
 
 ```bash
 pip install validatelite
-vlite check examples/orders.csv --rule "not_null(id)" --rule "unique(email)" --report report.json
+vlite check --conn examples/orders.csv --table orders --rule "not_null(id)" --rule "unique(email)" --report report.json
 cat report.json
 ```
 
@@ -104,7 +104,7 @@ cat report.json
 ```bash
 docker build -t validatelite:latest .
 docker run --rm -v $PWD/examples:/data validatelite:latest \
-  vlite check /data/orders.csv --rules /data/rules.json
+  vlite check --conn /data/orders.csv --table orders --rules /data/rules.json
 ```
 
 ### The Core Function

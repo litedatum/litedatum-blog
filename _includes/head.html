@@ -50,10 +50,11 @@
 
   {{ seo_tags }}
 
-  <!-- Manual noindex for tag and category pages -->
+  <!-- Manual noindex, nofollow for tag and category pages -->
   {% if page.type == 'tag' or page.type == 'category' %}
-    <meta name="robots" content="noindex">
+    <meta name="robots" content="noindex, nofollow">
   {% endif %}
+
 
   <title>
     {%- unless page.layout == 'home' -%}

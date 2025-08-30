@@ -329,4 +329,4 @@ Discover the comprehensive guide to schema drift detection and prevention from t
 
 Explore how rule-driven schema validation prevents data pipeline failures from schema drift—a simple, lightweight alternative to complex frameworks for reliable data quality.
 
-[Read More →](/posts/2025-07-17-Rule-Driven-Schema-Validation.html)
+[Read More →](/posts/Rule-Driven-Schema-Validation/)

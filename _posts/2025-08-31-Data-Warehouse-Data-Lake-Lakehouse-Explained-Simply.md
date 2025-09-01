@@ -1,7 +1,7 @@
 ---
 title: "Data Warehouse vs Data Lake vs Lakehouse: Explained Simply"
 date: 2025-08-31 22:00:00 +0800
-categories: [Data Architecture, Data Engineering, Data Warehouse]
+categories: [Data Architecture, Data Engineering, Data Tales]
 tags: [data warehouse, data lake, lakehouse, data architecture, data pipeline, data mart, schema-on-write, schema-on-read, data storage, data analysis, business intelligence, data engineering, data infrastructure, data management, data platform]
 author: Charles Fan
 description: "Confused about data warehouse vs data lake vs lakehouse? Our senior engineer explains why production databases aren't enough using a simple restaurant analogy that makes everything click."

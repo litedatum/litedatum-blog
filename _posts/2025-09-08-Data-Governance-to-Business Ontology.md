@@ -78,6 +78,249 @@ Today, they meet again in a sun-drenched afternoon café, steam rising from thei
 
 > "The fundamental flaw of traditional data governance: it tries to build cathedrals on quicksand—managing data shadows without defining the business reality that casts them."
 
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Light blue background -->
+  <rect x="0" y="0" width="1200" height="800" fill="#e0f2fe"/>
+  
+  <!-- Definitions -->
+  <defs>
+    <!-- Traditional approach gradient (blue-white) -->
+    <linearGradient id="oldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#cbd5e1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- New approach gradient (vibrant blue) -->
+    <linearGradient id="newGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0284c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Orange accent gradient -->
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fb923c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f97316" />
+    </marker>
+    
+    <!-- Shadow effect -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Glow effect for new paradigm -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Title -->
+  <text x="600" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#0c4a6e">
+    From Data Governance to Business Ontology: A Paradigm Shift
+  </text>
+  
+  <!-- Left side: Traditional Data Governance -->
+  <g id="traditional">
+    <!-- Main container -->
+    <rect x="50" y="100" width="400" height="600" rx="15" fill="url(#oldGradient)" filter="url(#shadow)"/>
+    
+    <!-- Title -->
+    <text x="250" y="140" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#1e3a8a">
+      Traditional Data Governance
+    </text>
+    <text x="250" y="165" font-family="Arial, sans-serif" font-size="16" font-style="italic" text-anchor="middle" fill="#64748b">
+      "The Librarian" Model
+    </text>
+    
+    <!-- Library icon -->
+    <g transform="translate(200, 190)">
+      <rect x="0" y="0" width="100" height="80" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+      <rect x="10" y="10" width="15" height="60" fill="#cbd5e1"/>
+      <rect x="30" y="10" width="15" height="60" fill="#cbd5e1"/>
+      <rect x="50" y="10" width="15" height="60" fill="#cbd5e1"/>
+      <rect x="70" y="10" width="15" height="60" fill="#cbd5e1"/>
+      <text x="50" y="100" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#64748b">
+        Static Rules Library
+      </text>
+    </g>
+    
+    <!-- Features list -->
+    <g transform="translate(80, 320)">
+      <circle cx="10" cy="10" r="5" fill="#94a3b8"/>
+      <text x="25" y="15" font-family="Arial, sans-serif" font-size="16" fill="#334155">
+        Data-Driven Approach
+      </text>
+      
+      <circle cx="10" cy="45" r="5" fill="#94a3b8"/>
+      <text x="25" y="50" font-family="Arial, sans-serif" font-size="16" fill="#334155">
+        Defensive Control
+      </text>
+      
+      <circle cx="10" cy="80" r="5" fill="#94a3b8"/>
+      <text x="25" y="85" font-family="Arial, sans-serif" font-size="16" fill="#334155">
+        Cost Center Mindset
+      </text>
+      
+      <circle cx="10" cy="115" r="5" fill="#94a3b8"/>
+      <text x="25" y="120" font-family="Arial, sans-serif" font-size="16" fill="#334155">
+        Rule-Based Management
+      </text>
+      
+      <circle cx="10" cy="150" r="5" fill="#94a3b8"/>
+      <text x="25" y="155" font-family="Arial, sans-serif" font-size="16" fill="#334155">
+        IT Department Led
+      </text>
+    </g>
+    
+    <!-- Problem box -->
+    <g transform="translate(125, 520)">
+      <rect x="0" y="0" width="250" height="120" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,5"/>
+      <text x="125" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#475569">
+        Core Problems
+      </text>
+      <text x="125" y="55" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#64748b">
+        • Unclear business value
+      </text>
+      <text x="125" y="75" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#64748b">
+        • AI innovation bottleneck
+      </text>
+      <text x="125" y="95" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#64748b">
+        • Conflicting definitions
+      </text>
+    </g>
+  </g>
+  
+  <!-- Middle: Transformation arrow -->
+  <g id="transformation">
+    <path d="M 480 400 L 720 400" stroke="url(#orangeGradient)" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="600" y="380" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#ea580c">
+      PARADIGM SHIFT
+    </text>
+    <text x="600" y="430" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">
+      From Control to Enablement
+    </text>
+    <text x="600" y="450" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">
+      From Data to Business Reality
+    </text>
+  </g>
+  
+  <!-- Right side: Business Ontology -->
+  <g id="ontology">
+    <!-- Main container with glow -->
+    <rect x="750" y="100" width="400" height="600" rx="15" fill="url(#newGradient)" filter="url(#shadow)"/>
+    
+    <!-- Title -->
+    <text x="950" y="140" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      Business Ontology
+    </text>
+    <text x="950" y="165" font-family="Arial, sans-serif" font-size="16" font-style="italic" text-anchor="middle" fill="#bae6fd">
+      "Ecosystem Architect" Model
+    </text>
+    
+    <!-- Knowledge graph icon -->
+    <g transform="translate(900, 190)">
+      <!-- Central node -->
+      <circle cx="50" cy="40" r="15" fill="#fb923c" stroke="#ea580c" stroke-width="2" filter="url(#glow)"/>
+      <text x="50" y="45" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#ffffff">Business</text>
+      
+      <!-- Surrounding nodes -->
+      <circle cx="10" cy="10" r="10" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+      <text x="10" y="13" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#0284c7">Data</text>
+      
+      <circle cx="90" cy="10" r="10" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+      <text x="90" y="13" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#0284c7">AI</text>
+      
+      <circle cx="10" cy="70" r="10" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+      <text x="10" y="73" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#0284c7">Process</text>
+      
+      <circle cx="90" cy="70" r="10" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+      <text x="90" y="73" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#0284c7">Value</text>
+      
+      <!-- Connection lines -->
+      <line x1="35" y1="30" x2="20" y2="18" stroke="#fb923c" stroke-width="2"/>
+      <line x1="65" y1="30" x2="80" y2="18" stroke="#fb923c" stroke-width="2"/>
+      <line x1="35" y1="50" x2="20" y2="62" stroke="#fb923c" stroke-width="2"/>
+      <line x1="65" y1="50" x2="80" y2="62" stroke="#fb923c" stroke-width="2"/>
+      
+      <text x="50" y="100" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ffffff">
+        Dynamic Knowledge Graph
+      </text>
+    </g>
+    
+    <!-- Features list -->
+    <g transform="translate(780, 320)">
+      <circle cx="10" cy="10" r="5" fill="#ffffff"/>
+      <text x="25" y="15" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">
+        Business-Driven Approach
+      </text>
+      
+      <circle cx="10" cy="45" r="5" fill="#ffffff"/>
+      <text x="25" y="50" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">
+        Active Enablement
+      </text>
+      
+      <circle cx="10" cy="80" r="5" fill="#ffffff"/>
+      <text x="25" y="85" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">
+        Value Creation Center
+      </text>
+      
+      <circle cx="10" cy="115" r="5" fill="#ffffff"/>
+      <text x="25" y="120" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">
+        Conceptual Clarity First
+      </text>
+      
+      <circle cx="10" cy="150" r="5" fill="#ffffff"/>
+      <text x="25" y="155" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">
+        Business-Tech Alignment
+      </text>
+    </g>
+    
+    <!-- Value box -->
+    <g transform="translate(825, 520)">
+      <rect x="0" y="0" width="250" height="120" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+      <text x="125" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#0284c7">
+        Core Value
+      </text>
+      <text x="125" y="55" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#0369a1">
+        • Business Clarity as a Service
+      </text>
+      <text x="125" y="75" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#0369a1">
+        • Unleashing AI potential
+      </text>
+      <text x="125" y="95" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#0369a1">
+        • Unified language & logic
+      </text>
+    </g>
+  </g>
+  
+  <!-- Bottom key insight -->
+  <rect x="150" y="730" width="900" height="50" rx="10" fill="#ffffff" stroke="#f97316" stroke-width="2"/>
+  <text x="600" y="760" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#ea580c">
+    Key Insight: Moving from managing data shadows to building business reality for shared human-AI understanding
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="50" r="30" fill="#bae6fd" opacity="0.3"/>
+  <circle cx="1100" cy="750" r="40" fill="#fed7aa" opacity="0.3"/>
+  <circle cx="1150" cy="150" r="25" fill="#bae6fd" opacity="0.3"/>
+</svg>
+
 ## How to Implement a Business Ontology
 
 **Mike:** I get it! It's like we meticulously drew a beautiful map (data governance), but executives don't want to visit the places marked on our map. They want to explore unmapped "new continents" (new business opportunities). They need compasses and ships, not old maps.

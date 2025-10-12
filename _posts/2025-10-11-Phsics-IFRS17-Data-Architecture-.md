@@ -14,7 +14,7 @@ seo:
   keywords: "IFRS 17, data architecture, event sourcing, bi-temporal data, financial reporting, insurance accounting, data modeling, time-travel, CSM calculation, data quality, atomic layer, semantic layer, financial data, regulatory compliance, data engineering, actuarial systems, financial technology, data governance, temporal data, financial analytics, insurance data, financial systems, data platform, financial architecture"
 ---
 
-You can’t fix your IFRS 17 data architecture with better technology. You have to fix your organization first. We established that in a [previous discussion](https://www.linkedin.com/pulse/real-mess-behind-your-ifrs-17-data-architecture-charles-fan-eig6e/), but for those of us in the trenches—the engineers and architects—the conversation eventually has to come back to code and design.
+You can’t fix your IFRS 17 data architecture with better technology. You have to fix your organization first. We established that in a [previous discussion](/posts/IFRS-17-Data-Architecture-challenge/), but for those of us in the trenches—the engineers and architects—the conversation eventually has to come back to code and design.
 
 So, let's talk about the hard science of building a data system for this notoriously complex accounting standard. These aren't just best practices; they are principles as unavoidable as the laws of physics.
 
@@ -84,7 +84,7 @@ The real challenge is that these nodes are deeply interconnected. The structure 
   </text>
   
   <!-- 节点: Atomic Events -->
-  <rect x="40" y="70" width="110" height="70" rx="8" fill="#10b981" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="70" width="110" height="70" rx="8" fill="#3b82f6" stroke="#2563eb" stroke-width="2" filter="url(#shadow)"/>
   <text x="95" y="100" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
     Atomic
   </text>
@@ -102,7 +102,7 @@ The real challenge is that these nodes are deeply interconnected. The structure 
   </text>
   
   <!-- 节点: Best Estimate Assumptions -->
-  <rect x="340" y="70" width="110" height="70" rx="8" fill="#8b5cf6" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="70" width="110" height="70" rx="8" fill="#3b82f6" stroke="#2563eb" stroke-width="2" filter="url(#shadow)"/>
   <text x="395" y="95" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
     Best Estimate
   </text>
@@ -111,7 +111,7 @@ The real challenge is that these nodes are deeply interconnected. The structure 
   </text>
   
   <!-- 节点: Fulfillment Cash Flows -->
-  <rect x="490" y="70" width="110" height="70" rx="8" fill="#ec4899" stroke="#db2777" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="70" width="110" height="70" rx="8" fill="#3b82f6" stroke="#2563eb" stroke-width="2" filter="url(#shadow)"/>
   <text x="545" y="95" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
     Fulfillment
   </text>
@@ -120,7 +120,7 @@ The real challenge is that these nodes are deeply interconnected. The structure 
   </text>
   
   <!-- 节点: CSM Calculation -->
-  <rect x="640" y="70" width="110" height="70" rx="8" fill="#f59e0b" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="70" width="110" height="70" rx="8" fill="#3b82f6" stroke="#2563eb" stroke-width="2" filter="url(#shadow)"/>
   <text x="695" y="100" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
     CSM
   </text>
@@ -129,20 +129,20 @@ The real challenge is that these nodes are deeply interconnected. The structure 
   </text>
   
   <!-- 箭头: Atomic Events → Experience Analysis -->
-  <path d="M 150 105 L 190 105" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-  <text x="170" y="95" font-family="Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">depends on</text>
+  <path d="M 150 105 L 190 105" stroke="#2563eb" stroke-width="1" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="170" y="95" font-family="Arial, sans-serif" font-size="8" fill="#475569" text-anchor="middle">depends on</text>
   
   <!-- 箭头: Experience Analysis → Best Estimate Assumptions -->
-  <path d="M 300 105 L 340 105" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-  <text x="320" y="95" font-family="Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">depends on</text>
+  <path d="M 300 105 L 340 105" stroke="#2563eb" stroke-width="1" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="320" y="95" font-family="Arial, sans-serif" font-size="8" fill="#475569" text-anchor="middle">depends on</text>
   
   <!-- 箭头: Best Estimate Assumptions → Fulfillment Cash Flows -->
-  <path d="M 450 105 L 490 105" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-  <text x="470" y="95" font-family="Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">depends on</text>
+  <path d="M 450 105 L 490 105" stroke="#2563eb" stroke-width="1" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="470" y="95" font-family="Arial, sans-serif" font-size="8" fill="#475569" text-anchor="middle">depends on</text>
   
   <!-- 箭头: Fulfillment Cash Flows → CSM Calculation -->
-  <path d="M 600 105 L 640 105" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-  <text x="620" y="95" font-family="Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">depends on</text>
+  <path d="M 600 105 L 640 105" stroke="#2563eb" stroke-width="1" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="620" y="95" font-family="Arial, sans-serif" font-size="8" fill="#475569" text-anchor="middle">depends on</text>
 </svg>
 
 Architecting the semantic layer is really about designing how to efficiently compute, cache, and invalidate parts of this DAG.
@@ -152,27 +152,250 @@ Architecting the semantic layer is really about designing how to efficiently com
 Your shiny new IFRS 17 system doesn't live in a vacuum. It has to connect to your existing data landscape, and there are three basic topologies, each with its own physical constraints.
 
 **Model A: The Leech**
-```
-Core Systems → Data Lake → [IFRS 17 Atomic Layer] → [IFRS 17 Semantic Layer] → Reports
-```
+
+<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 定义样式 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2563eb" />
+    </marker>
+    
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="800" height="200" fill="#f8fafc"/>
+  
+  <!-- 标题 -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">
+    Model A: The Leech
+  </text>
+  
+  <!-- 节点: Core Systems -->
+  <rect x="30" y="70" width="100" height="60" rx="8" fill="#64748b" stroke="#475569" stroke-width="2" filter="url(#shadow)"/>
+  <text x="80" y="95" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Core
+  </text>
+  <text x="80" y="113" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Systems
+  </text>
+  
+  <!-- 节点: Data Lake -->
+  <rect x="170" y="70" width="100" height="60" rx="8" fill="#0ea5e9" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="95" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Data
+  </text>
+  <text x="220" y="113" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Lake
+  </text>
+  
+  <!-- 节点: IFRS 17 Atomic Layer -->
+  <rect x="310" y="70" width="120" height="60" rx="8" fill="#10b981" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+  <text x="370" y="90" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
+    IFRS 17
+  </text>
+  <text x="370" y="108" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
+    Atomic Layer
+  </text>
+  
+  <!-- 节点: IFRS 17 Semantic Layer -->
+  <rect x="470" y="70" width="120" height="60" rx="8" fill="#8b5cf6" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <text x="530" y="90" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
+    IFRS 17
+  </text>
+  <text x="530" y="108" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
+    Semantic Layer
+  </text>
+  
+  <!-- 节点: Reports -->
+  <rect x="630" y="70" width="100" height="60" rx="8" fill="#f59e0b" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+  <text x="680" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Reports
+  </text>
+  
+  <!-- 箭头: Core Systems → Data Lake -->
+  <path d="M 130 100 L 170 100" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头: Data Lake → IFRS 17 Atomic Layer -->
+  <path d="M 270 100 L 310 100" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头: IFRS 17 Atomic Layer → IFRS 17 Semantic Layer -->
+  <path d="M 430 100 L 470 100" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头: IFRS 17 Semantic Layer → Reports -->
+  <path d="M 590 100 L 630 100" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- 说明文字 -->
+  <text x="400" y="165" font-family="Arial, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+    Least invasive approach, but suffers from accumulated latency
+  </text>
+</svg>
 
 This is the least invasive approach. But it suffers from accumulated latency, and data quality issues from upstream systems get amplified with each hop.
 
 **Model B: The Twin**
-```
-             ┌──> Data Lake
-Core Systems─┤
-             └──> [IFRS 17 Atomic Layer] → [IFRS 17 Semantic Layer] → Reports
-```
+
+<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 定义样式 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2563eb" />
+    </marker>
+    
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="800" height="200" fill="#f8fafc"/>
+  
+  <!-- 标题 -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">
+    Model B: The Twin
+  </text>
+  
+  <!-- 节点: Core Systems -->
+  <rect x="30" y="85" width="100" height="60" rx="8" fill="#64748b" stroke="#475569" stroke-width="2" filter="url(#shadow)"/>
+  <text x="80" y="110" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Core
+  </text>
+  <text x="80" y="128" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Systems
+  </text>
+  
+  <!-- 节点: Data Lake (上方路径) -->
+  <rect x="200" y="50" width="100" height="60" rx="8" fill="#0ea5e9" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
+  <text x="250" y="75" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Data
+  </text>
+  <text x="250" y="93" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Lake
+  </text>
+  
+  <!-- 节点: IFRS 17 Atomic Layer (下方路径) -->
+  <rect x="200" y="120" width="120" height="60" rx="8" fill="#10b981" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+  <text x="260" y="140" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
+    IFRS 17
+  </text>
+  <text x="260" y="158" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
+    Atomic Layer
+  </text>
+  
+  <!-- 节点: IFRS 17 Semantic Layer -->
+  <rect x="370" y="120" width="120" height="60" rx="8" fill="#8b5cf6" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <text x="430" y="140" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
+    IFRS 17
+  </text>
+  <text x="430" y="158" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
+    Semantic Layer
+  </text>
+  
+  <!-- 节点: Reports -->
+  <rect x="540" y="120" width="100" height="60" rx="8" fill="#f59e0b" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+  <text x="590" y="155" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Reports
+  </text>
+  
+  <!-- 箭头: Core Systems → Data Lake -->
+  <path d="M 130 100 L 180 80 L 200 80" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头: Core Systems → IFRS 17 Atomic Layer -->
+  <path d="M 130 130 L 180 140 L 200 150" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头: IFRS 17 Atomic Layer → IFRS 17 Semantic Layer -->
+  <path d="M 320 150 L 370 150" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头: IFRS 17 Semantic Layer → Reports -->
+  <path d="M 490 150 L 540 150" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- 分支点 -->
+  <circle cx="130" cy="115" r="4" fill="#2563eb"/>
+</svg>
 
 Here, you create a dedicated, optimized path for IFRS 17. It's faster and cleaner, but now you have a new problem: keeping the twin systems consistent.
 
 **Model C: The Big Bang**
-```
-             ┌──> Data Lake
-Core Systems ─→ [New Central Atomic Layer] ─┤
-                                            └──> [IFRS 17 Semantic Layer] → Reports
-```
+
+<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 定义样式 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2563eb" />
+    </marker>
+    
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="800" height="200" fill="#f8fafc"/>
+  
+  <!-- 标题 -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">
+    Model C: The Big Bang
+  </text>
+  
+  <!-- 节点: Core Systems -->
+  <rect x="30" y="85" width="100" height="60" rx="8" fill="#64748b" stroke="#475569" stroke-width="2" filter="url(#shadow)"/>
+  <text x="80" y="110" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Core
+  </text>
+  <text x="80" y="128" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Systems
+  </text>
+  
+  <!-- 节点: New Central Atomic Layer -->
+  <rect x="180" y="85" width="140" height="60" rx="8" fill="#10b981" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+  <text x="250" y="105" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
+    New Central
+  </text>
+  <text x="250" y="123" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
+    Atomic Layer
+  </text>
+  
+  <!-- 节点: Data Lake (上方路径) -->
+  <rect x="390" y="50" width="100" height="60" rx="8" fill="#0ea5e9" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
+  <text x="440" y="75" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Data
+  </text>
+  <text x="440" y="93" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Lake
+  </text>
+  
+  <!-- 节点: IFRS 17 Semantic Layer (下方路径) -->
+  <rect x="370" y="120" width="140" height="60" rx="8" fill="#8b5cf6" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <text x="440" y="140" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
+    IFRS 17
+  </text>
+  <text x="440" y="158" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
+    Semantic Layer
+  </text>
+  
+  <!-- 节点: Reports -->
+  <rect x="560" y="120" width="100" height="60" rx="8" fill="#f59e0b" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+  <text x="610" y="155" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    Reports
+  </text>
+  
+  <!-- 箭头: Core Systems → New Central Atomic Layer -->
+  <path d="M 130 115 L 180 115" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头: New Central Atomic Layer → Data Lake -->
+  <path d="M 320 100 L 360 85 L 390 80" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头: New Central Atomic Layer → IFRS 17 Semantic Layer -->
+  <path d="M 320 130 L 360 140 L 370 150" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头: IFRS 17 Semantic Layer → Reports -->
+  <path d="M 510 150 L 560 150" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- 分支点 -->
+  <circle cx="320" cy="115" r="4" fill="#2563eb"/>
+</svg>
 
 This is the purist's choice: rebuild your core data platform around an event-sourced atomic layer that serves everyone. It offers a single source of truth but comes with enormous cost and risk.
 
@@ -288,8 +511,8 @@ Ultimately, the challenge of IFRS 17 data architecture is that you are being ask
 
 This article is part of a series exploring the multi-layered challenges of IFRS 17 implementation. While this piece focuses on the technical physics of data architecture, the broader context involves organizational and structural challenges that must be addressed first:
 
-**["The Real Mess Behind Your IFRS 17 Data Architecture"](https://www.linkedin.com/pulse/real-mess-behind-your-ifrs-17-data-architecture-charles-fan-eig6e/)** - Before diving into technical solutions, understand why IFRS 17 projects struggle. This piece reveals that the core challenge isn't technical—it's the collision between your company's unique history of tech debt and a rigid regulatory mandate. You can't code your way out of a trust problem.
+**["The Real Mess Behind Your IFRS 17 Data Architecture"](/posts/IFRS-17-Data-Architecture-challenge/)** - Before diving into technical solutions, understand why IFRS 17 projects struggle. This piece reveals that the core challenge isn't technical—it's the collision between your company's unique history of tech debt and a rigid regulatory mandate. You can't code your way out of a trust problem.
 
-**["IFRS17 Data Quality: A Layered Unraveling of an Architectural Predicament"](https://www.linkedin.com/pulse/ifrs17-data-quality-layered-unraveling-architectural-predicament-fan-u925e/)** - Data quality issues in IFRS 17 aren't just technical problems—they're symptoms of deeper architectural predicaments. This article explores how data governance becomes office politics and why the subledger system is often a bad translator between incompatible business languages.
+**["IFRS17 Data Quality: A Layered Unraveling of an Architectural Predicament"](/posts/IFRS17-Data-Quality/)** - Data quality issues in IFRS 17 aren't just technical problems—they're symptoms of deeper architectural predicaments. This article explores how data governance becomes office politics and why the subledger system is often a bad translator between incompatible business languages.
 
 Together, these three articles form a complete picture: from organizational challenges to architectural principles to the fundamental physics of building time-traveling financial systems. The technical solutions outlined in this article only work when built on the organizational foundation established in the previous discussions.
